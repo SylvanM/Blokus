@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AE8B7F6225E4189400811C03 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B7F6125E4189400811C03 /* main.swift */; };
+		AE8B7F7525E4196000811C03 /* bitboard.c in Sources */ = {isa = PBXBuildFile; fileRef = AE8B7F7425E4196000811C03 /* bitboard.c */; };
+		AE8B7F7A25E41B5100811C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B7F7925E41B5100811C03 /* Game.swift */; };
+		AE8B7F8325E4222200811C03 /* BitBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B7F8225E4222200811C03 /* BitBoard.swift */; };
+		AE8B7F8725E4259000811C03 /* Pieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8B7F8625E4259000811C03 /* Pieces.swift */; };
+		AEBD449A25E5587C007E45BF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449925E5587C007E45BF /* Player.swift */; };
+		AEBD449D25E5599E007E45BF /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449C25E5599E007E45BF /* Human.swift */; };
+		AEBD44A025E56D22007E45BF /* Game+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449F25E56D22007E45BF /* Game+Utility.swift */; };
+		AEBD44A425E7EC59007E45BF /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44A325E7EC59007E45BF /* Engine.swift */; };
+		AEBD44A725E7EC84007E45BF /* Engine+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */; };
+		AEBD44AB25E82F94007E45BF /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44AA25E82F94007E45BF /* Remote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +35,31 @@
 /* Begin PBXFileReference section */
 		AE8B7F5E25E4189400811C03 /* Blokus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Blokus; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8B7F6125E4189400811C03 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AE8B7F7225E4196000811C03 /* Blokus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blokus-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE8B7F7325E4196000811C03 /* bitboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitboard.h; sourceTree = "<group>"; };
+		AE8B7F7425E4196000811C03 /* bitboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bitboard.c; sourceTree = "<group>"; };
+		AE8B7F7925E41B5100811C03 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		AE8B7F8025E41BBE00811C03 /* pieces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pieces.h; sourceTree = "<group>"; };
+		AE8B7F8225E4222200811C03 /* BitBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBoard.swift; sourceTree = "<group>"; };
+		AE8B7F8625E4259000811C03 /* Pieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pieces.swift; sourceTree = "<group>"; };
+		AEBD449925E5587C007E45BF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AEBD449C25E5599E007E45BF /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		AEBD449F25E56D22007E45BF /* Game+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Utility.swift"; sourceTree = "<group>"; };
+		AEBD44A325E7EC59007E45BF /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine+Utility.swift"; sourceTree = "<group>"; };
+		AEBD44AA25E82F94007E45BF /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		AEBD44B225E989A4007E45BF /* Blokus Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blokus Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE8B7F5B25E4189400811C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBD44AF25E989A4007E45BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8B7F5E25E4189400811C03 /* Blokus */,
+				AEBD44B225E989A4007E45BF /* Blokus Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +89,62 @@
 		AE8B7F6025E4189400811C03 /* Blokus */ = {
 			isa = PBXGroup;
 			children = (
+				AEBD44A925E82F7B007E45BF /* Remote */,
+				AE8B7F7225E4196000811C03 /* Blokus-Bridging-Header.h */,
+				AE8B7F6D25E4190B00811C03 /* Engine */,
+				AE8B7F6C25E418FF00811C03 /* Human */,
+				AE8B7F6B25E418F000811C03 /* Game */,
+				AE8B7F6A25E418E500811C03 /* Board */,
 				AE8B7F6125E4189400811C03 /* main.swift */,
 			);
 			path = Blokus;
+			sourceTree = "<group>";
+		};
+		AE8B7F6A25E418E500811C03 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B7F8225E4222200811C03 /* BitBoard.swift */,
+				AE8B7F8625E4259000811C03 /* Pieces.swift */,
+				AE8B7F7325E4196000811C03 /* bitboard.h */,
+				AE8B7F7425E4196000811C03 /* bitboard.c */,
+				AE8B7F8025E41BBE00811C03 /* pieces.h */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		AE8B7F6B25E418F000811C03 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				AE8B7F7925E41B5100811C03 /* Game.swift */,
+				AEBD449F25E56D22007E45BF /* Game+Utility.swift */,
+				AEBD449925E5587C007E45BF /* Player.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		AE8B7F6C25E418FF00811C03 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				AEBD449C25E5599E007E45BF /* Human.swift */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		AE8B7F6D25E4190B00811C03 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				AEBD44A325E7EC59007E45BF /* Engine.swift */,
+				AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		AEBD44A925E82F7B007E45BF /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				AEBD44AA25E82F94007E45BF /* Remote.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +167,23 @@
 			productReference = AE8B7F5E25E4189400811C03 /* Blokus */;
 			productType = "com.apple.product-type.tool";
 		};
+		AEBD44B125E989A4007E45BF /* Blokus Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBD44B725E989A4007E45BF /* Build configuration list for PBXNativeTarget "Blokus Tests" */;
+			buildPhases = (
+				AEBD44AE25E989A4007E45BF /* Sources */,
+				AEBD44AF25E989A4007E45BF /* Frameworks */,
+				AEBD44B025E989A4007E45BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blokus Tests";
+			productName = "Blokus Tests";
+			productReference = AEBD44B225E989A4007E45BF /* Blokus Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +194,10 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					AE8B7F5D25E4189400811C03 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					AEBD44B125E989A4007E45BF = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -110,16 +216,44 @@
 			projectRoot = "";
 			targets = (
 				AE8B7F5D25E4189400811C03 /* Blokus */,
+				AEBD44B125E989A4007E45BF /* Blokus Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEBD44B025E989A4007E45BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE8B7F5A25E4189400811C03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBD44AB25E82F94007E45BF /* Remote.swift in Sources */,
+				AE8B7F8725E4259000811C03 /* Pieces.swift in Sources */,
+				AEBD449D25E5599E007E45BF /* Human.swift in Sources */,
+				AEBD44A725E7EC84007E45BF /* Engine+Utility.swift in Sources */,
+				AE8B7F8325E4222200811C03 /* BitBoard.swift in Sources */,
 				AE8B7F6225E4189400811C03 /* main.swift in Sources */,
+				AE8B7F7525E4196000811C03 /* bitboard.c in Sources */,
+				AEBD449A25E5587C007E45BF /* Player.swift in Sources */,
+				AEBD44A025E56D22007E45BF /* Game+Utility.swift in Sources */,
+				AEBD44A425E7EC59007E45BF /* Engine.swift in Sources */,
+				AE8B7F7A25E41B5100811C03 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBD44AE25E989A4007E45BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +378,18 @@
 		AE8B7F6625E4189400811C03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDSTZ7K2MV;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blokus/Blokus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -255,9 +397,52 @@
 		AE8B7F6725E4189400811C03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDSTZ7K2MV;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blokus/Blokus-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AEBD44B825E989A4007E45BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Blokus Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Blokus-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AEBD44B925E989A4007E45BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JDSTZ7K2MV;
+				INFOPLIST_FILE = "Blokus Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "martin.Blokus-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -280,6 +465,15 @@
 			buildConfigurations = (
 				AE8B7F6625E4189400811C03 /* Debug */,
 				AE8B7F6725E4189400811C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBD44B725E989A4007E45BF /* Build configuration list for PBXNativeTarget "Blokus Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBD44B825E989A4007E45BF /* Debug */,
+				AEBD44B925E989A4007E45BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,5 +7,10 @@
 
 import Foundation
 
-print("Hello, World!")
 
+let sylvan = Human()
+let another = Engine()
+
+let result = Game.runGame(playerOne: Engine(), playerTwo: Engine())
+
+print("Result: \(result)")
