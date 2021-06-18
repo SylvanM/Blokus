@@ -8,14 +8,15 @@
 import Foundation
 
 /**
- * A class for analyzing and playing Blokus
+ * A class for playing Blokus
  */
-class Engine: Player {
+class SimpleAI: Player {
     
     func move(subjectiveBoard board: BitBoard) -> Move {
         
-        // this AI is pretty simple. all it knows is that more tiles is good, so place the biggest tiles first.
-        var legalMoves = Engine.getAllMoves(byPlayer: 1, on: board)
+        // this AI is pretty simple. all it knows is that more tiles is good, so place the biggest
+        // tiles first.
+        var legalMoves = Game.getAllMoves(byPlayer: 1, on: board)
         
         let largestSize = legalMoves.map { getPieceArea(piece: $0.piece) }.max()
         

@@ -15,8 +15,7 @@
 		AEBD449A25E5587C007E45BF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449925E5587C007E45BF /* Player.swift */; };
 		AEBD449D25E5599E007E45BF /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449C25E5599E007E45BF /* Human.swift */; };
 		AEBD44A025E56D22007E45BF /* Game+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD449F25E56D22007E45BF /* Game+Utility.swift */; };
-		AEBD44A425E7EC59007E45BF /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44A325E7EC59007E45BF /* Engine.swift */; };
-		AEBD44A725E7EC84007E45BF /* Engine+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */; };
+		AEBD44A425E7EC59007E45BF /* SimpleAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44A325E7EC59007E45BF /* SimpleAI.swift */; };
 		AEBD44AB25E82F94007E45BF /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD44AA25E82F94007E45BF /* Remote.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,7 @@
 		AEBD449925E5587C007E45BF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AEBD449C25E5599E007E45BF /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		AEBD449F25E56D22007E45BF /* Game+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Utility.swift"; sourceTree = "<group>"; };
-		AEBD44A325E7EC59007E45BF /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
-		AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Engine+Utility.swift"; sourceTree = "<group>"; };
+		AEBD44A325E7EC59007E45BF /* SimpleAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAI.swift; sourceTree = "<group>"; };
 		AEBD44AA25E82F94007E45BF /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 		AEBD44B225E989A4007E45BF /* Blokus Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blokus Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,7 +89,7 @@
 			children = (
 				AEBD44A925E82F7B007E45BF /* Remote */,
 				AE8B7F7225E4196000811C03 /* Blokus-Bridging-Header.h */,
-				AE8B7F6D25E4190B00811C03 /* Engine */,
+				AE8B7F6D25E4190B00811C03 /* Bots */,
 				AE8B7F6C25E418FF00811C03 /* Human */,
 				AE8B7F6B25E418F000811C03 /* Game */,
 				AE8B7F6A25E418E500811C03 /* Board */,
@@ -130,13 +128,12 @@
 			path = Human;
 			sourceTree = "<group>";
 		};
-		AE8B7F6D25E4190B00811C03 /* Engine */ = {
+		AE8B7F6D25E4190B00811C03 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
-				AEBD44A325E7EC59007E45BF /* Engine.swift */,
-				AEBD44A625E7EC84007E45BF /* Engine+Utility.swift */,
+				AEBD44A325E7EC59007E45BF /* SimpleAI.swift */,
 			);
-			path = Engine;
+			path = Bots;
 			sourceTree = "<group>";
 		};
 		AEBD44A925E82F7B007E45BF /* Remote */ = {
@@ -239,13 +236,12 @@
 				AEBD44AB25E82F94007E45BF /* Remote.swift in Sources */,
 				AE8B7F8725E4259000811C03 /* Pieces.swift in Sources */,
 				AEBD449D25E5599E007E45BF /* Human.swift in Sources */,
-				AEBD44A725E7EC84007E45BF /* Engine+Utility.swift in Sources */,
 				AE8B7F8325E4222200811C03 /* BitBoard.swift in Sources */,
 				AE8B7F6225E4189400811C03 /* main.swift in Sources */,
 				AE8B7F7525E4196000811C03 /* bitboard.c in Sources */,
 				AEBD449A25E5587C007E45BF /* Player.swift in Sources */,
 				AEBD44A025E56D22007E45BF /* Game+Utility.swift in Sources */,
-				AEBD44A425E7EC59007E45BF /* Engine.swift in Sources */,
+				AEBD44A425E7EC59007E45BF /* SimpleAI.swift in Sources */,
 				AE8B7F7A25E41B5100811C03 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

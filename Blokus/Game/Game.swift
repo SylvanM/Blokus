@@ -30,6 +30,11 @@ struct Move {
  */
 class Game {
     
+    // MARK: Properties
+    
+    /// The game board
+    var gameBoard: BitBoard
+    
     // MARK: Enumerations
     
     /**
@@ -64,6 +69,22 @@ class Game {
         case playerTwoWins
     }
     
+    // MARK: Initializers
+    
+    /**
+     * Creates a new, empty game
+     */
+    init() {
+        gameBoard = BitBoard()
+    }
+    
+    /**
+     * Creates a game from a bitboard file
+     */
+    init(fromPath path: String) {
+        gameBoard = BitBoard(fromPath: path)
+    }
+    
     // MARK: Game Functions
     
     /**
@@ -71,9 +92,7 @@ class Game {
      *
      * - Returns: a `GameStatus` which is either `draw`, `playerOneWins`, or `playerTwoWins`
      */
-    class func runGame(playerOne: Player, playerTwo: Player, verbose: Bool = true) -> GameStatus {
-        
-        var gameBoard = BitBoard()
+    func runGame(playerOne: Player, playerTwo: Player, verbose: Bool = true) -> GameStatus {
         
         while Game.gameStatus(for: gameBoard) == .onGoing {
             
@@ -82,27 +101,33 @@ class Game {
             }
             
             // check that player one has moves to make
-            if !(Engine.getAllMoves(byPlayer: 1, on: gameBoard).isEmpty) {
-                print("Player 1's turn.")
+            if !(Game.getAllMoves(byPlayer: 1, on: gameBoard).isEmpty) {
+                
+                if verbose { print("Player 1's turn.") }
+                
                 gameBoard.makeLegalMove(playerOne.move(subjectiveBoard: gameBoard), by: 1)
                 
                 if verbose {
                     print("Player 1 made a move. Now showing current state of board.")
                     gameBoard.printBoard()
                 }
+                
             } else if verbose {
                 print("Player 1 has no legal moves. Skipping their turn.")
             }
             
             // check that player one has moves to make
-            if !(Engine.getAllMoves(byPlayer: 2, on: gameBoard).isEmpty) {
-                print("Player 2's turn.")
+            if !(Game.getAllMoves(byPlayer: 2, on: gameBoard).isEmpty) {
+                
+                if verbose { print("Player 2's turn.") }
+                
                 gameBoard.makeLegalMove(playerTwo.move(subjectiveBoard: gameBoard.flipped()), by: 2)
                 
                 if verbose {
                     print("Player 2 made a move. Now showing current state of board.")
                     gameBoard.printBoard()
                 }
+                
             } else if verbose {
                 print("Player 2 has no legal moves. Skipping their turn.")
             }
@@ -113,9 +138,16 @@ class Game {
     }
     
     /**
+     * Resets the game
+     */
+    func reset() {
+        self.gameBoard = BitBoard()
+    }
+    
+    /**
      * Runs a game against a remote player
      */
-    class func playAgainstRemote(remote: Remote, local: Player, localGoesFirst: Bool = true) -> GameStatus {
+    func playAgainstRemote(remote: Remote, local: Player, localGoesFirst: Bool = true) -> GameStatus {
         
         var moveCounter: Int = 0
         
